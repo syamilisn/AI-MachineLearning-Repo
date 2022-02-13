@@ -1,0 +1,14 @@
+D1,Sunny,Hot,High,weak,No
+D2,Sunny,Hot,High,strong,No
+D3,Overcast,Hot,High,weak,Yes
+D4,Rain,Mild,High,weak,Yes
+D5,Rain,Cool,Normal,weak,Yes
+D6,Rain,Cool,Normal,strong,No
+D7,Overcast,Cool,Normal,strong,Yes
+D8,Sunny,Mild,High,weak,No
+D9,Sunny,Cool,Normal,weak,Yes
+D10,Rain,Mild,Normal,weak,Yes
+D11,Sunny,Mild,Normal,strong,Yes
+D12,Overcast,Mild,High,strong,Yes
+D13,Overcast,Hot,Normal,weak,Yes
+D14,Rain,Mild,High,strong,No

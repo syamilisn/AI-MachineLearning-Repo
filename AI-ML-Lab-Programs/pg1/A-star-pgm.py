@@ -8,7 +8,7 @@ def aStarAlgo(start_node, stop_node):
     while len(open_set)>0:
         n= None
         for v in open_set:
-            if n == None or g[v]+ heuristic(v)<g[n]+heuristic(n):
+            if n == None or g[v]+ h(v) < g[n]+h(n):
                 n=v
         if n == stop_node or Graph_nodes[n]==None:
             pass
@@ -49,61 +49,23 @@ def get_neighbors(v):
     else:
         return None
 
-def heuristic(n):
+def h(n):
     H_dist = {
-        """
         'A':11,
         'B':6,
         'C':99,
         'D':1,
         'E':7,
         'G':0,
-        
-        'S':5,
-        'A':3,
-        'B':4,
-        'C':3,
-        'D':16,
-        'G':0,
-        """
-        'A': 10,
-        'B': 8,
-        'C': 5,
-        'D': 7,
-        'E': 3,
-        'F': 6,
-        'G': 5,
-        'H': 3,
-        'I': 1,
-        'J': 0 
-       
     }
     return H_dist[n]
 
 Graph_nodes={
-    """
     'A': [('B', 2), ('E', 3)],
     'B': [('C', 1),('G', 9)],
     'C': None,
     'E': [('D', 6)],
     'D': [('G', 1)],
-    
-    'S': [('A',1),('G',10)],
-    'A': [('B', 2), ('C', 1)],
-    'B': [('D', 5)],
-    'C': [('D', 3), ('G', 4)],
-    'D': [('G', 2)],
-    """
-    'A': [('B', 6), ('F', 3)],
-    'B': [('C', 3), ('D', 2)],
-    'C': [('D', 1), ('E', 5)],
-    'D': [('C', 1), ('E', 8)],
-    'E': [('I', 5), ('J', 5)],
-    'F': [('G', 1),('H', 7)] ,
-    'G': [('I', 3)],
-    'H': [('I', 2)],
-    'I': [('E', 5), ('J', 3)],
-
-
 }
-aStarAlgo('A','J')
+
+aStarAlgo('A','G')
